@@ -5,7 +5,7 @@
 ## Gradle
 ```groovy
     dependencies{
-        implementation 'com.github.tomxukui:XEditText:v2.2.7'
+        implementation 'com.github.tomxukui:XEditText:v2.3.5'
     }
 ```
 
