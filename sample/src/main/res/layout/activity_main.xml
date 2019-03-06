@@ -74,6 +74,7 @@
             android:hint="customize separating pattern"
             android:inputType="phone"
             app:x_separator="-" />
+
         <!-- if you want to separate, do not set maxLength attr -->
 
         <TextView
@@ -109,5 +110,7 @@
             android:layout_height="wrap_content"
             android:hint="disable emoji inputting"
             app:x_disableEmoji="true" />
+
     </LinearLayout>
+
 </ScrollView>
