@@ -537,9 +537,15 @@ public class XEditText extends AppCompatEditText {
     public void setTextEx(CharSequence text) {
         if (TextUtils.isEmpty(text) || hasNoSeparator) {
             setText(text);
+
             if (text != null && text.length() > 0) {
-                setSelection(text.length());
+                Editable editable = getText();
+
+                if (editable != null) {
+                    setSelection(editable.toString().length());
+                }
             }
+
         } else {
             setTextToSeparate(text, true);
         }
@@ -588,12 +594,17 @@ public class XEditText extends AppCompatEditText {
                 }
             }
         } else {
-            if (mSelectionPos > text.length()) {
-                mSelectionPos = text.length();
+            Editable editable = getText();
+            int pos = (editable == null ? 0 : editable.toString().length());
+
+            if (mSelectionPos > pos) {
+                mSelectionPos = pos;
             }
+
             if (mSelectionPos < 0) {
                 mSelectionPos = 0;
             }
+
             setSelection(mSelectionPos);
         }
     }

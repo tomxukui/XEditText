@@ -1,5 +1,4 @@
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -15,16 +14,25 @@
         android:paddingBottom="60dp">
 
         <com.xw.repo.XEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="0123456789"
+            android:hint="测试带空格的手机号"
+            android:inputType="number"
+            android:maxLength="11"
+            app:x_disableClear="true" />
+
+        <com.xw.repo.XEditText
             android:id="@+id/default_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="default, just likes EditText"
-            app:x_disableClear="true"/>
+            app:x_disableClear="true" />
 
         <com.xw.repo.XEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="clear drawable"/>
+            android:hint="clear drawable" />
 
         <com.xw.repo.XEditText
             android:id="@+id/clear_marker_edit_text"
@@ -32,14 +40,14 @@
             android:layout_height="wrap_content"
             android:hint="default password input"
             android:inputType="textPassword"
-            android:maxLength="30"/>
+            android:maxLength="30" />
 
         <TextView
             android:id="@+id/text1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:textColor="#1976d2"/>
+            android:textColor="#1976d2" />
 
         <com.xw.repo.XEditText
             android:layout_width="match_parent"
@@ -49,7 +57,7 @@
             android:maxLength="30"
             app:x_clearDrawable="@mipmap/ic_clear"
             app:x_hidePwdDrawable="@mipmap/ic_hide"
-            app:x_showPwdDrawable="@mipmap/ic_show"/>
+            app:x_showPwdDrawable="@mipmap/ic_show" />
 
         <com.xw.repo.XEditText
             android:id="@+id/custom_edit_text"
@@ -57,7 +65,7 @@
             android:layout_height="wrap_content"
             android:hint="customize separating pattern"
             android:inputType="phone"
-            app:x_separator="-"/>
+            app:x_separator="-" />
         <!-- if you want to separate, do not set maxLength attr -->
 
         <TextView
@@ -65,19 +73,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:textColor="#1976d2"/>
+            android:textColor="#1976d2" />
 
         <Button
             android:id="@+id/show_pattern_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="separate:13800000000"/>
+            android:text="separate:13800000000" />
 
         <com.xw.repo.XEditText
             android:id="@+id/show_separator_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="normal String separate to pattern"/>
+            android:hint="normal String separate to pattern" />
 
         <com.xw.repo.XEditText
             android:id="@+id/enable_emoji_edit_text"
@@ -85,13 +93,13 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:hint="enable emoji inputting"
-            app:x_disableEmoji="false"/>
+            app:x_disableEmoji="false" />
 
         <com.xw.repo.XEditText
             android:id="@+id/disable_emoji_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="disable emoji inputting"
-            app:x_disableEmoji="true"/>
+            app:x_disableEmoji="true" />
     </LinearLayout>
 </ScrollView>
