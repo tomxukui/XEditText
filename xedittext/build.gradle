@@ -1,38 +1,33 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
 
-def VERSION_NAME = "2.2.4"
+group = 'com.github.tomxukui'
 
 android {
-    compileSdkVersion 28
-    buildToolsVersion "28.0.3"
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
 
     defaultConfig {
-        minSdkVersion 11
-        targetSdkVersion 28
-        versionCode 25
-        versionName VERSION_NAME
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode 27
+        versionName "2.2.5"
     }
+
     buildTypes {
+
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+
     }
+
     lintOptions {
         abortOnError false
     }
+
 }
 
 dependencies {
-    compileOnly 'com.android.support:appcompat-v7:28.0.0'
-}
-
-apply plugin: 'com.novoda.bintray-release'
-publish {
-    userOrg = 'woxingxiao'
-    groupId = 'com.xw.repo'
-    artifactId = 'xedittext'
-    publishVersion = VERSION_NAME
-    desc = 'A useful Android custom edittext widget.'
-    website = 'https://github.com/woxingxiao/XEditText'
+    compileOnly rootProject.ext.dependencies["appcompat-v7"]
 }

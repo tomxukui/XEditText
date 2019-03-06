@@ -1,29 +1,34 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 27
-    buildToolsVersion "27.0.3"
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
 
     defaultConfig {
         applicationId "com.xw.sample.xedittext"
-        minSdkVersion 14
-        targetSdkVersion 27
-        versionCode 6
-        versionName "2.2"
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode 27
+        versionName "2.2.5"
     }
+
     buildTypes {
+
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+
     }
+
     lintOptions {
         abortOnError false
     }
+
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation rootProject.ext.dependencies["appcompat-v7"]
+
     implementation project(':xedittext')
 }
