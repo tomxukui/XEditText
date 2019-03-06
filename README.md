@@ -3,6 +3,8 @@
 # XEditText
 Wrapped common usage of `EditText`.
 
+## fork过来主要是为了解决被加了最大长度的属性，然后用户通过复制粘贴到控件，因为光标位置问题导致奔溃的情况，不过发现另外一个问题，暂时无法修复，就是控件加了digits不起作用
+
 ## Features
 - To clear all text content just by one click on the right. The clear drawable is customizable.
 - Perfectly fit for password input scenario. The toggle drawable is also customizable.
@@ -18,7 +20,6 @@ Wrapped common usage of `EditText`.
 ## Gradle
 ```groovy
     dependencies{
-        //e.g. 'com.xw.repo:xedittext:2.1.0@aar'
         compile 'com.xw.repo:xedittext:${LATEST_VERSION}@aar'
     }
 ```
