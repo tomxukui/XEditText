@@ -5,7 +5,7 @@
 ## Gradle
 ```groovy
     dependencies{
-        compile 'com.xw.repo:xedittext:${LATEST_VERSION}@aar'
+        implementation 'com.github.tomxukui:XEditText:v2.2.7'
     }
 ```
 
