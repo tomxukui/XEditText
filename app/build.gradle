@@ -7,8 +7,8 @@ android {
         applicationId "com.xw.sample.xedittext"
         minSdkVersion rootProject.ext.android.minSdkVersion
         targetSdkVersion rootProject.ext.android.targetSdkVersion
-        versionCode 33
-        versionName "2.3.3"
+        versionCode 34
+        versionName "2.3.4"
     }
 
     buildTypes {
