@@ -7,8 +7,8 @@ android {
         applicationId "com.xw.sample.xedittext"
         minSdkVersion rootProject.ext.android.minSdkVersion
         targetSdkVersion rootProject.ext.android.targetSdkVersion
-        versionCode 28
-        versionName "2.2.6"
+        versionCode 30
+        versionName "2.3.0"
     }
 
     buildTypes {
@@ -18,10 +18,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
 
-    }
-
-    lintOptions {
-        abortOnError false
     }
 
 }
