@@ -1,7 +1,6 @@
 package com.xw.sample.xedittext;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.view.View;
 import android.widget.Button;
@@ -9,6 +8,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.xw.repo.XEditText;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
